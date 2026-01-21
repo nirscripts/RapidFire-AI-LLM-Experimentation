@@ -1,0 +1,221 @@
+2026-01-21 05:19:58 | Experiment | INFO | experiment.py:163 | [ucsb-catalog-rag-exp1:Experiment] Experiment ucsb-catalog-rag-exp1 created with Experiment ID: 1 at /content/rapidfireai/rapidfire_experiments/ucsb-catalog-rag-exp1
+2026-01-21 05:20:40 | Experiment | INFO | metric_rfmetric_manager.py:56 | [ucsb-catalog-rag-exp1:Experiment] Initialized TensorBoardMetricLogger: rf_tensorboard
+2026-01-21 05:20:40 | Experiment | INFO | experiment.py:208 | [ucsb-catalog-rag-exp1:Experiment] Initialized MetricLogger experiment: ucsb-catalog-rag-exp1
+2026-01-21 05:20:40 | Experiment | INFO | dispatcher.py:641 | [ucsb-catalog-rag-exp1:Experiment] Started interactive control dispatcher on http://127.0.0.1:8851
+2026-01-21 05:20:40 | Experiment | INFO | dispatcher.py:642 | [ucsb-catalog-rag-exp1:Experiment] Use dispatcher API to dynamically stop/resume/delete/clone pipelines
+2026-01-21 05:20:40 | waitress | INFO | wasyncore.py:449 | Serving on http://127.0.0.1:8851
+2026-01-21 05:20:41 | Experiment | INFO | experiment.py:373 | [ucsb-catalog-rag-exp1:Experiment] Running multi-config experiment with 4 shard(s), (0.5 GPUs per actor, 1.0 CPUs per actor, 1 actors)
+2026-01-21 05:20:41 | Experiment | INFO | experiment.py:382 | [ucsb-catalog-rag-exp1:Experiment] Reset states of existing pipelines/contexts/tasks (marked as failed)
+2026-01-21 05:20:42 | Controller | INFO | controller.py:773 | [ucsb-catalog-rag-exp1:Controller] Dataset sharded into 4 shard(s). Shard sizes: [4, 4, 4, 3]
+2026-01-21 05:20:42 | Controller | INFO | controller.py:778 | [ucsb-catalog-rag-exp1:Controller] Received 4 pipeline configuration(s)
+2026-01-21 05:20:42 | Controller | INFO | controller.py:201 | [ucsb-catalog-rag-exp1:Controller] Found 2 unique RAG context(s)
+2026-01-21 05:20:42 | Controller | INFO | controller.py:212 | [ucsb-catalog-rag-exp1:Controller] Will build new context 6bd938e6...
+2026-01-21 05:20:42 | Controller | INFO | controller.py:212 | [ucsb-catalog-rag-exp1:Controller] Will build new context 7a1ddaf6...
+2026-01-21 05:20:42 | Controller | INFO | controller.py:238 | [ucsb-catalog-rag-exp1:Controller] Building 2 context(s) in parallel...
+2026-01-21 05:20:42 | Controller | INFO | controller.py:265 | [ucsb-catalog-rag-exp1:Controller] Creating 2 DocProcessingActor(s) for parallel processing
+2026-01-21 05:20:42 | Controller | INFO | controller.py:342 | [ucsb-catalog-rag-exp1:Controller] Submitted 2 build task(s) in parallel
+2026-01-21 05:21:19 | DocProcessingActor | INFO | doc_actor.py:55 | [ucsb-catalog-rag-exp1:DocProcessingActor] DocProcessingActor initialized
+2026-01-21 05:21:19 | DocProcessingActor | INFO | doc_actor.py:55 | [ucsb-catalog-rag-exp1:DocProcessingActor] DocProcessingActor initialized
+2026-01-21 05:21:20 | DocProcessingActor | INFO | doc_actor.py:95 | [ucsb-catalog-rag-exp1:DocProcessingActor] DocProcessingActor: Starting context initialization...
+2026-01-21 05:21:20 | DocProcessingActor | INFO | doc_actor.py:101 | [ucsb-catalog-rag-exp1:DocProcessingActor] Building FAISS index...
+2026-01-21 05:21:20 | sentence_transformers.SentenceTransformer | INFO | SentenceTransformer.py:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-21 05:21:20 | DocProcessingActor | INFO | doc_actor.py:95 | [ucsb-catalog-rag-exp1:DocProcessingActor] DocProcessingActor: Starting context initialization...
+2026-01-21 05:21:20 | DocProcessingActor | INFO | doc_actor.py:101 | [ucsb-catalog-rag-exp1:DocProcessingActor] Building FAISS index...
+2026-01-21 05:21:20 | sentence_transformers.SentenceTransformer | INFO | SentenceTransformer.py:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-21 05:22:07 | DocProcessingActor | INFO | doc_actor.py:103 | [ucsb-catalog-rag-exp1:DocProcessingActor] FAISS index built successfully
+2026-01-21 05:22:07 | DocProcessingActor | INFO | doc_actor.py:107 | [ucsb-catalog-rag-exp1:DocProcessingActor] Transferring FAISS index from GPU to CPU for serialization...
+2026-01-21 05:22:07 | DocProcessingActor | INFO | doc_actor.py:114 | [ucsb-catalog-rag-exp1:DocProcessingActor] FAISS index transferred to CPU successfully
+2026-01-21 05:22:07 | DocProcessingActor | INFO | doc_actor.py:136 | [ucsb-catalog-rag-exp1:DocProcessingActor] Serializing FAISS index for cross-actor sharing...
+2026-01-21 05:22:07 | DocProcessingActor | INFO | doc_actor.py:141 | [ucsb-catalog-rag-exp1:DocProcessingActor] FAISS index serialized: 7494264 bytes
+2026-01-21 05:22:07 | DocProcessingActor | INFO | doc_actor.py:162 | [ucsb-catalog-rag-exp1:DocProcessingActor] DocProcessingActor: Context components ready for sharing
+2026-01-21 05:22:07 | Controller | INFO | controller.py:363 | [ucsb-catalog-rag-exp1:Controller] Built context 1 (6bd938e6...) successfully in 85.30s
+2026-01-21 05:22:12 | DocProcessingActor | INFO | doc_actor.py:103 | [ucsb-catalog-rag-exp1:DocProcessingActor] FAISS index built successfully
+2026-01-21 05:22:12 | DocProcessingActor | INFO | doc_actor.py:107 | [ucsb-catalog-rag-exp1:DocProcessingActor] Transferring FAISS index from GPU to CPU for serialization...
+2026-01-21 05:22:12 | DocProcessingActor | INFO | doc_actor.py:114 | [ucsb-catalog-rag-exp1:DocProcessingActor] FAISS index transferred to CPU successfully
+2026-01-21 05:22:12 | DocProcessingActor | INFO | doc_actor.py:136 | [ucsb-catalog-rag-exp1:DocProcessingActor] Serializing FAISS index for cross-actor sharing...
+2026-01-21 05:22:12 | DocProcessingActor | INFO | doc_actor.py:141 | [ucsb-catalog-rag-exp1:DocProcessingActor] FAISS index serialized: 16046712 bytes
+2026-01-21 05:22:12 | DocProcessingActor | INFO | doc_actor.py:162 | [ucsb-catalog-rag-exp1:DocProcessingActor] DocProcessingActor: Context components ready for sharing
+2026-01-21 05:22:12 | Controller | INFO | controller.py:363 | [ucsb-catalog-rag-exp1:Controller] Built context 2 (7a1ddaf6...) successfully in 90.07s
+2026-01-21 05:22:12 | Controller | INFO | controller.py:404 | [ucsb-catalog-rag-exp1:Controller] Completed parallel context building for 2 context(s)
+2026-01-21 05:22:12 | Controller | INFO | controller.py:798 | [ucsb-catalog-rag-exp1:Controller] Created 1 query processing actors (generic pool)
+2026-01-21 05:22:12 | Controller | INFO | controller.py:809 | [ucsb-catalog-rag-exp1:Controller] Initialized scheduler with 4 pipelines, 1 actors, 4 shards
+2026-01-21 05:22:12 | Controller | INFO | controller.py:976 | [ucsb-catalog-rag-exp1:Controller] Starting multi-pipeline inference scheduling...
+2026-01-21 05:22:12 | Controller | INFO | controller.py:1251 | [ucsb-catalog-rag-exp1:Controller] Scheduling pipeline 1 (Pipeline 1) on actor 0 for shard 0 (2 batches)
+2026-01-21 05:22:32 | QueryProcessingActor-0 | INFO | query_actor.py:139 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Initializing new inference engine (config hash: f895be3c)
+2026-01-21 05:28:50 | QueryProcessingActor-0 | INFO | query_actor.py:162 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Using CPU-based FAISS for retrieval (avoids GPU memory conflicts)
+2026-01-21 05:28:50 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Deserializing FAISS index for this actor...
+2026-01-21 05:28:50 | sentence_transformers.SentenceTransformer | INFO | SentenceTransformer.py:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-21 05:28:52 | QueryProcessingActor-0 | INFO | query_actor.py:178 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-01-21 05:28:52 | QueryProcessingActor-0 | INFO | query_actor.py:187 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Created independent FAISS vector store for this actor
+2026-01-21 05:28:52 | QueryProcessingActor-0 | INFO | query_actor.py:196 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-01-21 05:28:52 | QueryProcessingActor-0 | INFO | query_actor.py:218 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated RAG spec with retriever and template
+2026-01-21 05:30:31 | Controller | INFO | controller.py:1149 | [ucsb-catalog-rag-exp1:Controller] Pipeline 1 completed shard 0 (2 batches, 99.60s)
+2026-01-21 05:30:31 | Controller | INFO | controller.py:1251 | [ucsb-catalog-rag-exp1:Controller] Scheduling pipeline 2 (Pipeline 2) on actor 0 for shard 0 (2 batches)
+2026-01-21 05:30:31 | QueryProcessingActor-0 | INFO | query_actor.py:143 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Reusing existing inference engine (config hash: f895be3c)
+2026-01-21 05:30:31 | QueryProcessingActor-0 | INFO | query_actor.py:162 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Using CPU-based FAISS for retrieval (avoids GPU memory conflicts)
+2026-01-21 05:30:31 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Deserializing FAISS index for this actor...
+2026-01-21 05:30:31 | sentence_transformers.SentenceTransformer | INFO | SentenceTransformer.py:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-21 05:30:33 | QueryProcessingActor-0 | INFO | query_actor.py:178 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-01-21 05:30:33 | QueryProcessingActor-0 | INFO | query_actor.py:187 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Created independent FAISS vector store for this actor
+2026-01-21 05:30:33 | QueryProcessingActor-0 | INFO | query_actor.py:196 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-01-21 05:30:33 | QueryProcessingActor-0 | INFO | query_actor.py:218 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated RAG spec with retriever and template
+2026-01-21 05:30:47 | Controller | INFO | controller.py:1149 | [ucsb-catalog-rag-exp1:Controller] Pipeline 2 completed shard 0 (2 batches, 13.52s)
+2026-01-21 05:30:47 | Controller | INFO | controller.py:1251 | [ucsb-catalog-rag-exp1:Controller] Scheduling pipeline 3 (Pipeline 3) on actor 0 for shard 0 (2 batches)
+2026-01-21 05:30:47 | QueryProcessingActor-0 | INFO | query_actor.py:143 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Reusing existing inference engine (config hash: f895be3c)
+2026-01-21 05:30:47 | QueryProcessingActor-0 | INFO | query_actor.py:162 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Using CPU-based FAISS for retrieval (avoids GPU memory conflicts)
+2026-01-21 05:30:47 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Deserializing FAISS index for this actor...
+2026-01-21 05:30:47 | sentence_transformers.SentenceTransformer | INFO | SentenceTransformer.py:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-21 05:30:49 | QueryProcessingActor-0 | INFO | query_actor.py:178 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-01-21 05:30:49 | QueryProcessingActor-0 | INFO | query_actor.py:187 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Created independent FAISS vector store for this actor
+2026-01-21 05:30:49 | QueryProcessingActor-0 | INFO | query_actor.py:196 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-01-21 05:30:49 | QueryProcessingActor-0 | INFO | query_actor.py:218 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated RAG spec with retriever and template
+2026-01-21 05:30:56 | Controller | INFO | controller.py:1149 | [ucsb-catalog-rag-exp1:Controller] Pipeline 3 completed shard 0 (2 batches, 6.51s)
+2026-01-21 05:30:56 | Controller | INFO | controller.py:1251 | [ucsb-catalog-rag-exp1:Controller] Scheduling pipeline 4 (Pipeline 4) on actor 0 for shard 0 (2 batches)
+2026-01-21 05:30:56 | QueryProcessingActor-0 | INFO | query_actor.py:143 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Reusing existing inference engine (config hash: f895be3c)
+2026-01-21 05:30:56 | QueryProcessingActor-0 | INFO | query_actor.py:162 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Using CPU-based FAISS for retrieval (avoids GPU memory conflicts)
+2026-01-21 05:30:56 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Deserializing FAISS index for this actor...
+2026-01-21 05:30:56 | sentence_transformers.SentenceTransformer | INFO | SentenceTransformer.py:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-21 05:30:58 | QueryProcessingActor-0 | INFO | query_actor.py:178 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-01-21 05:30:58 | QueryProcessingActor-0 | INFO | query_actor.py:187 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Created independent FAISS vector store for this actor
+2026-01-21 05:30:58 | QueryProcessingActor-0 | INFO | query_actor.py:196 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-01-21 05:30:58 | QueryProcessingActor-0 | INFO | query_actor.py:218 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated RAG spec with retriever and template
+2026-01-21 05:31:11 | Controller | INFO | controller.py:1149 | [ucsb-catalog-rag-exp1:Controller] Pipeline 4 completed shard 0 (2 batches, 13.02s)
+2026-01-21 05:31:11 | Controller | INFO | controller.py:1251 | [ucsb-catalog-rag-exp1:Controller] Scheduling pipeline 1 (Pipeline 1) on actor 0 for shard 1 (2 batches)
+2026-01-21 05:31:11 | QueryProcessingActor-0 | INFO | query_actor.py:143 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Reusing existing inference engine (config hash: f895be3c)
+2026-01-21 05:31:11 | QueryProcessingActor-0 | INFO | query_actor.py:162 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Using CPU-based FAISS for retrieval (avoids GPU memory conflicts)
+2026-01-21 05:31:11 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Deserializing FAISS index for this actor...
+2026-01-21 05:31:11 | sentence_transformers.SentenceTransformer | INFO | SentenceTransformer.py:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-21 05:31:12 | QueryProcessingActor-0 | INFO | query_actor.py:178 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-01-21 05:31:12 | QueryProcessingActor-0 | INFO | query_actor.py:187 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Created independent FAISS vector store for this actor
+2026-01-21 05:31:12 | QueryProcessingActor-0 | INFO | query_actor.py:196 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-01-21 05:31:12 | QueryProcessingActor-0 | INFO | query_actor.py:218 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated RAG spec with retriever and template
+2026-01-21 05:31:25 | Controller | INFO | controller.py:1149 | [ucsb-catalog-rag-exp1:Controller] Pipeline 1 completed shard 1 (2 batches, 12.51s)
+2026-01-21 05:31:25 | Controller | INFO | controller.py:1251 | [ucsb-catalog-rag-exp1:Controller] Scheduling pipeline 2 (Pipeline 2) on actor 0 for shard 1 (2 batches)
+2026-01-21 05:31:25 | QueryProcessingActor-0 | INFO | query_actor.py:143 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Reusing existing inference engine (config hash: f895be3c)
+2026-01-21 05:31:25 | QueryProcessingActor-0 | INFO | query_actor.py:162 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Using CPU-based FAISS for retrieval (avoids GPU memory conflicts)
+2026-01-21 05:31:25 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Deserializing FAISS index for this actor...
+2026-01-21 05:31:25 | sentence_transformers.SentenceTransformer | INFO | SentenceTransformer.py:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-21 05:31:27 | QueryProcessingActor-0 | INFO | query_actor.py:178 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-01-21 05:31:27 | QueryProcessingActor-0 | INFO | query_actor.py:187 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Created independent FAISS vector store for this actor
+2026-01-21 05:31:27 | QueryProcessingActor-0 | INFO | query_actor.py:196 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-01-21 05:31:27 | QueryProcessingActor-0 | INFO | query_actor.py:218 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated RAG spec with retriever and template
+2026-01-21 05:31:43 | Controller | INFO | controller.py:1149 | [ucsb-catalog-rag-exp1:Controller] Pipeline 2 completed shard 1 (2 batches, 16.02s)
+2026-01-21 05:31:43 | Controller | INFO | controller.py:1251 | [ucsb-catalog-rag-exp1:Controller] Scheduling pipeline 3 (Pipeline 3) on actor 0 for shard 1 (2 batches)
+2026-01-21 05:31:43 | QueryProcessingActor-0 | INFO | query_actor.py:143 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Reusing existing inference engine (config hash: f895be3c)
+2026-01-21 05:31:43 | QueryProcessingActor-0 | INFO | query_actor.py:162 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Using CPU-based FAISS for retrieval (avoids GPU memory conflicts)
+2026-01-21 05:31:43 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Deserializing FAISS index for this actor...
+2026-01-21 05:31:43 | sentence_transformers.SentenceTransformer | INFO | SentenceTransformer.py:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-21 05:31:45 | QueryProcessingActor-0 | INFO | query_actor.py:178 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-01-21 05:31:45 | QueryProcessingActor-0 | INFO | query_actor.py:187 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Created independent FAISS vector store for this actor
+2026-01-21 05:31:45 | QueryProcessingActor-0 | INFO | query_actor.py:196 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-01-21 05:31:45 | QueryProcessingActor-0 | INFO | query_actor.py:218 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated RAG spec with retriever and template
+2026-01-21 05:31:56 | Controller | INFO | controller.py:1149 | [ucsb-catalog-rag-exp1:Controller] Pipeline 3 completed shard 1 (2 batches, 11.51s)
+2026-01-21 05:31:56 | Controller | INFO | controller.py:1251 | [ucsb-catalog-rag-exp1:Controller] Scheduling pipeline 4 (Pipeline 4) on actor 0 for shard 1 (2 batches)
+2026-01-21 05:31:56 | QueryProcessingActor-0 | INFO | query_actor.py:143 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Reusing existing inference engine (config hash: f895be3c)
+2026-01-21 05:31:56 | QueryProcessingActor-0 | INFO | query_actor.py:162 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Using CPU-based FAISS for retrieval (avoids GPU memory conflicts)
+2026-01-21 05:31:56 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Deserializing FAISS index for this actor...
+2026-01-21 05:31:56 | sentence_transformers.SentenceTransformer | INFO | SentenceTransformer.py:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-21 05:31:58 | QueryProcessingActor-0 | INFO | query_actor.py:178 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-01-21 05:31:58 | QueryProcessingActor-0 | INFO | query_actor.py:187 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Created independent FAISS vector store for this actor
+2026-01-21 05:31:58 | QueryProcessingActor-0 | INFO | query_actor.py:196 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-01-21 05:31:58 | QueryProcessingActor-0 | INFO | query_actor.py:218 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated RAG spec with retriever and template
+2026-01-21 05:32:13 | Controller | INFO | controller.py:1149 | [ucsb-catalog-rag-exp1:Controller] Pipeline 4 completed shard 1 (2 batches, 14.52s)
+2026-01-21 05:32:13 | Controller | INFO | controller.py:1251 | [ucsb-catalog-rag-exp1:Controller] Scheduling pipeline 1 (Pipeline 1) on actor 0 for shard 2 (2 batches)
+2026-01-21 05:32:13 | QueryProcessingActor-0 | INFO | query_actor.py:143 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Reusing existing inference engine (config hash: f895be3c)
+2026-01-21 05:32:13 | QueryProcessingActor-0 | INFO | query_actor.py:162 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Using CPU-based FAISS for retrieval (avoids GPU memory conflicts)
+2026-01-21 05:32:13 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Deserializing FAISS index for this actor...
+2026-01-21 05:32:13 | sentence_transformers.SentenceTransformer | INFO | SentenceTransformer.py:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-21 05:32:15 | QueryProcessingActor-0 | INFO | query_actor.py:178 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-01-21 05:32:15 | QueryProcessingActor-0 | INFO | query_actor.py:187 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Created independent FAISS vector store for this actor
+2026-01-21 05:32:15 | QueryProcessingActor-0 | INFO | query_actor.py:196 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-01-21 05:32:15 | QueryProcessingActor-0 | INFO | query_actor.py:218 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated RAG spec with retriever and template
+2026-01-21 05:32:27 | Controller | INFO | controller.py:1149 | [ucsb-catalog-rag-exp1:Controller] Pipeline 1 completed shard 2 (2 batches, 12.51s)
+2026-01-21 05:32:27 | Controller | INFO | controller.py:1251 | [ucsb-catalog-rag-exp1:Controller] Scheduling pipeline 2 (Pipeline 2) on actor 0 for shard 2 (2 batches)
+2026-01-21 05:32:27 | QueryProcessingActor-0 | INFO | query_actor.py:143 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Reusing existing inference engine (config hash: f895be3c)
+2026-01-21 05:32:27 | QueryProcessingActor-0 | INFO | query_actor.py:162 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Using CPU-based FAISS for retrieval (avoids GPU memory conflicts)
+2026-01-21 05:32:27 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Deserializing FAISS index for this actor...
+2026-01-21 05:32:27 | sentence_transformers.SentenceTransformer | INFO | SentenceTransformer.py:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-21 05:32:29 | QueryProcessingActor-0 | INFO | query_actor.py:178 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-01-21 05:32:29 | QueryProcessingActor-0 | INFO | query_actor.py:187 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Created independent FAISS vector store for this actor
+2026-01-21 05:32:29 | QueryProcessingActor-0 | INFO | query_actor.py:196 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-01-21 05:32:29 | QueryProcessingActor-0 | INFO | query_actor.py:218 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated RAG spec with retriever and template
+2026-01-21 05:32:43 | Controller | INFO | controller.py:1149 | [ucsb-catalog-rag-exp1:Controller] Pipeline 2 completed shard 2 (2 batches, 14.01s)
+2026-01-21 05:32:43 | Controller | INFO | controller.py:1251 | [ucsb-catalog-rag-exp1:Controller] Scheduling pipeline 3 (Pipeline 3) on actor 0 for shard 2 (2 batches)
+2026-01-21 05:32:43 | QueryProcessingActor-0 | INFO | query_actor.py:143 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Reusing existing inference engine (config hash: f895be3c)
+2026-01-21 05:32:43 | QueryProcessingActor-0 | INFO | query_actor.py:162 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Using CPU-based FAISS for retrieval (avoids GPU memory conflicts)
+2026-01-21 05:32:43 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Deserializing FAISS index for this actor...
+2026-01-21 05:32:43 | sentence_transformers.SentenceTransformer | INFO | SentenceTransformer.py:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-21 05:32:45 | QueryProcessingActor-0 | INFO | query_actor.py:178 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-01-21 05:32:45 | QueryProcessingActor-0 | INFO | query_actor.py:187 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Created independent FAISS vector store for this actor
+2026-01-21 05:32:45 | QueryProcessingActor-0 | INFO | query_actor.py:196 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-01-21 05:32:45 | QueryProcessingActor-0 | INFO | query_actor.py:218 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated RAG spec with retriever and template
+2026-01-21 05:32:56 | Controller | INFO | controller.py:1149 | [ucsb-catalog-rag-exp1:Controller] Pipeline 3 completed shard 2 (2 batches, 10.51s)
+2026-01-21 05:32:56 | Controller | INFO | controller.py:1251 | [ucsb-catalog-rag-exp1:Controller] Scheduling pipeline 4 (Pipeline 4) on actor 0 for shard 2 (2 batches)
+2026-01-21 05:32:56 | QueryProcessingActor-0 | INFO | query_actor.py:143 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Reusing existing inference engine (config hash: f895be3c)
+2026-01-21 05:32:56 | QueryProcessingActor-0 | INFO | query_actor.py:162 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Using CPU-based FAISS for retrieval (avoids GPU memory conflicts)
+2026-01-21 05:32:56 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Deserializing FAISS index for this actor...
+2026-01-21 05:32:57 | sentence_transformers.SentenceTransformer | INFO | SentenceTransformer.py:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-21 05:32:59 | QueryProcessingActor-0 | INFO | query_actor.py:178 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-01-21 05:32:59 | QueryProcessingActor-0 | INFO | query_actor.py:187 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Created independent FAISS vector store for this actor
+2026-01-21 05:32:59 | QueryProcessingActor-0 | INFO | query_actor.py:196 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-01-21 05:32:59 | QueryProcessingActor-0 | INFO | query_actor.py:218 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated RAG spec with retriever and template
+2026-01-21 05:33:14 | Controller | INFO | controller.py:1149 | [ucsb-catalog-rag-exp1:Controller] Pipeline 4 completed shard 2 (2 batches, 14.51s)
+2026-01-21 05:33:14 | Controller | INFO | controller.py:1251 | [ucsb-catalog-rag-exp1:Controller] Scheduling pipeline 1 (Pipeline 1) on actor 0 for shard 3 (1 batches)
+2026-01-21 05:33:14 | QueryProcessingActor-0 | INFO | query_actor.py:143 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Reusing existing inference engine (config hash: f895be3c)
+2026-01-21 05:33:14 | QueryProcessingActor-0 | INFO | query_actor.py:162 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Using CPU-based FAISS for retrieval (avoids GPU memory conflicts)
+2026-01-21 05:33:14 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Deserializing FAISS index for this actor...
+2026-01-21 05:33:14 | sentence_transformers.SentenceTransformer | INFO | SentenceTransformer.py:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-21 05:33:16 | QueryProcessingActor-0 | INFO | query_actor.py:178 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-01-21 05:33:16 | QueryProcessingActor-0 | INFO | query_actor.py:187 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Created independent FAISS vector store for this actor
+2026-01-21 05:33:16 | QueryProcessingActor-0 | INFO | query_actor.py:196 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-01-21 05:33:16 | QueryProcessingActor-0 | INFO | query_actor.py:218 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated RAG spec with retriever and template
+2026-01-21 05:33:22 | Controller | INFO | controller.py:1044 | [ucsb-catalog-rag-exp1:Controller] Pipeline 1 completed all 4 shards
+2026-01-21 05:33:22 | Controller | INFO | controller.py:1149 | [ucsb-catalog-rag-exp1:Controller] Pipeline 1 completed shard 3 (1 batches, 6.51s)
+2026-01-21 05:33:22 | Controller | INFO | controller.py:1251 | [ucsb-catalog-rag-exp1:Controller] Scheduling pipeline 2 (Pipeline 2) on actor 0 for shard 3 (1 batches)
+2026-01-21 05:33:22 | QueryProcessingActor-0 | INFO | query_actor.py:143 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Reusing existing inference engine (config hash: f895be3c)
+2026-01-21 05:33:22 | QueryProcessingActor-0 | INFO | query_actor.py:162 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Using CPU-based FAISS for retrieval (avoids GPU memory conflicts)
+2026-01-21 05:33:22 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Deserializing FAISS index for this actor...
+2026-01-21 05:33:22 | sentence_transformers.SentenceTransformer | INFO | SentenceTransformer.py:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-21 05:33:24 | QueryProcessingActor-0 | INFO | query_actor.py:178 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-01-21 05:33:24 | QueryProcessingActor-0 | INFO | query_actor.py:187 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Created independent FAISS vector store for this actor
+2026-01-21 05:33:24 | QueryProcessingActor-0 | INFO | query_actor.py:196 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-01-21 05:33:24 | QueryProcessingActor-0 | INFO | query_actor.py:218 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated RAG spec with retriever and template
+2026-01-21 05:33:34 | Controller | INFO | controller.py:1044 | [ucsb-catalog-rag-exp1:Controller] Pipeline 2 completed all 4 shards
+2026-01-21 05:33:34 | Controller | INFO | controller.py:1149 | [ucsb-catalog-rag-exp1:Controller] Pipeline 2 completed shard 3 (1 batches, 9.51s)
+2026-01-21 05:33:34 | Controller | INFO | controller.py:1251 | [ucsb-catalog-rag-exp1:Controller] Scheduling pipeline 3 (Pipeline 3) on actor 0 for shard 3 (1 batches)
+2026-01-21 05:33:34 | QueryProcessingActor-0 | INFO | query_actor.py:143 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Reusing existing inference engine (config hash: f895be3c)
+2026-01-21 05:33:34 | QueryProcessingActor-0 | INFO | query_actor.py:162 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Using CPU-based FAISS for retrieval (avoids GPU memory conflicts)
+2026-01-21 05:33:34 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Deserializing FAISS index for this actor...
+2026-01-21 05:33:34 | sentence_transformers.SentenceTransformer | INFO | SentenceTransformer.py:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-21 05:33:35 | QueryProcessingActor-0 | INFO | query_actor.py:178 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-01-21 05:33:35 | QueryProcessingActor-0 | INFO | query_actor.py:187 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Created independent FAISS vector store for this actor
+2026-01-21 05:33:35 | QueryProcessingActor-0 | INFO | query_actor.py:196 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-01-21 05:33:35 | QueryProcessingActor-0 | INFO | query_actor.py:218 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated RAG spec with retriever and template
+2026-01-21 05:33:41 | Controller | INFO | controller.py:1044 | [ucsb-catalog-rag-exp1:Controller] Pipeline 3 completed all 4 shards
+2026-01-21 05:33:41 | Controller | INFO | controller.py:1149 | [ucsb-catalog-rag-exp1:Controller] Pipeline 3 completed shard 3 (1 batches, 6.01s)
+2026-01-21 05:33:41 | Controller | INFO | controller.py:1251 | [ucsb-catalog-rag-exp1:Controller] Scheduling pipeline 4 (Pipeline 4) on actor 0 for shard 3 (1 batches)
+2026-01-21 05:33:41 | QueryProcessingActor-0 | INFO | query_actor.py:143 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Reusing existing inference engine (config hash: f895be3c)
+2026-01-21 05:33:41 | QueryProcessingActor-0 | INFO | query_actor.py:162 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Using CPU-based FAISS for retrieval (avoids GPU memory conflicts)
+2026-01-21 05:33:41 | QueryProcessingActor-0 | INFO | query_actor.py:169 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Deserializing FAISS index for this actor...
+2026-01-21 05:33:42 | sentence_transformers.SentenceTransformer | INFO | SentenceTransformer.py:227 | Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-01-21 05:33:44 | QueryProcessingActor-0 | INFO | query_actor.py:178 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated embedding function: HuggingFaceEmbeddings
+2026-01-21 05:33:44 | QueryProcessingActor-0 | INFO | query_actor.py:187 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Created independent FAISS vector store for this actor
+2026-01-21 05:33:44 | QueryProcessingActor-0 | INFO | query_actor.py:196 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated retriever with search_type=similarity
+2026-01-21 05:33:44 | QueryProcessingActor-0 | INFO | query_actor.py:218 | [ucsb-catalog-rag-exp1:QueryProcessingActor-0] Recreated RAG spec with retriever and template
+2026-01-21 05:33:51 | Controller | INFO | controller.py:1044 | [ucsb-catalog-rag-exp1:Controller] Pipeline 4 completed all 4 shards
+2026-01-21 05:33:51 | Controller | INFO | controller.py:1149 | [ucsb-catalog-rag-exp1:Controller] Pipeline 4 completed shard 3 (1 batches, 7.51s)
+2026-01-21 05:33:51 | Controller | INFO | controller.py:1215 | [ucsb-catalog-rag-exp1:Controller] All pipelines completed all shards!
+2026-01-21 05:33:51 | Controller | INFO | controller.py:571 | [ucsb-catalog-rag-exp1:Controller] Computing final metrics for all pipelines...
+2026-01-21 05:33:51 | Experiment | INFO | metric_rfmetric_manager.py:137 | [ucsb-catalog-rag-exp1:Experiment] Ending run: Pipeline 1_1 in rf_tensorboard
+2026-01-21 05:33:51 | Controller | INFO | controller.py:731 | [ucsb-catalog-rag-exp1:Controller] Pipeline 1 (Pipeline 1) completed successfully
+2026-01-21 05:33:51 | Experiment | INFO | metric_rfmetric_manager.py:137 | [ucsb-catalog-rag-exp1:Experiment] Ending run: Pipeline 2_2 in rf_tensorboard
+2026-01-21 05:33:51 | Controller | INFO | controller.py:731 | [ucsb-catalog-rag-exp1:Controller] Pipeline 2 (Pipeline 2) completed successfully
+2026-01-21 05:33:51 | Experiment | INFO | metric_rfmetric_manager.py:137 | [ucsb-catalog-rag-exp1:Experiment] Ending run: Pipeline 3_3 in rf_tensorboard
+2026-01-21 05:33:51 | Controller | INFO | controller.py:731 | [ucsb-catalog-rag-exp1:Controller] Pipeline 3 (Pipeline 3) completed successfully
+2026-01-21 05:33:51 | Experiment | INFO | metric_rfmetric_manager.py:137 | [ucsb-catalog-rag-exp1:Experiment] Ending run: Pipeline 4_4 in rf_tensorboard
+2026-01-21 05:33:51 | Controller | INFO | controller.py:731 | [ucsb-catalog-rag-exp1:Controller] Pipeline 4 (Pipeline 4) completed successfully
+2026-01-21 05:37:50 | ExperimentUtils | INFO | experiment_utils.py:180 | [ucsb-catalog-rag-exp1:ExperimentUtils] Reset experiment states - marked ongoing pipelines, contexts, and tasks as failed
+2026-01-21 05:37:50 | ExperimentUtils | INFO | experiment_utils.py:188 | [ucsb-catalog-rag-exp1:ExperimentUtils] Experiment marked as cancelled. Ongoing pipelines, contexts, and tasks have been marked as failed.
+2026-01-21 05:37:50 | ExperimentUtils | INFO | experiment_utils.py:154 | [ucsb-catalog-rag-exp1:ExperimentUtils] Experiment ucsb-catalog-rag-exp1 ended
+2026-01-21 05:37:51 | Experiment | INFO | experiment.py:564 | [ucsb-catalog-rag-exp1:Experiment] All actors shut down
+2026-01-21 05:37:51 | Experiment | INFO | experiment.py:565 | [ucsb-catalog-rag-exp1:Experiment] Dispatcher will automatically shut down (daemon thread)
